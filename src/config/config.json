@@ -1,0 +1,18 @@
+{
+    "development": {
+        "username": "DevWeb",
+        "password": "devweb123",
+        "database": "doctorcare",
+        "host": "localhost",
+        "dialect": "mysql",
+        "operatorsAliases": 0,
+        "dialectOptions": {
+            "dateStrings": true,
+            "typeCast": true,
+            "timezone": "+07:00"
+        },
+        "timezone": "+07:00"
+    },
+    "test": { },
+    "production": { }
+}
