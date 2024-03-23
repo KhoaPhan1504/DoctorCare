@@ -1,10 +1,10 @@
-'use strict';
+    'use strict';
 
 module.exports = {
     up: (queryInterface, Sequelize) => {
         return queryInterface.bulkInsert('Users', [
             {
-                name: 'admin - HaryPhamDev',
+                name: 'admin - KhoaDev',
                 email: 'admin@gmail.com',
                 password: '$2a$07$Bq0hCq3kVrvKUHfMT0NJROmQkx09aEQkGlwBGEdw799YJvWqH1kuy', //123456
                 address: 'New York',

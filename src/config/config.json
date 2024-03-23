@@ -5,6 +5,10 @@
         "database": "doctorcare",
         "host": "localhost",
         "dialect": "mysql",
+        "logging": false,
+        "query": {
+            "raw": true
+        },
         "operatorsAliases": 0,
         "dialectOptions": {
             "dateStrings": true,

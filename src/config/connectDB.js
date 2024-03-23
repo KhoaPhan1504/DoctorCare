@@ -6,8 +6,8 @@ const sequelize = new Sequelize(
     process.env.DB_USERNAME,
     process.env.DB_PASSWORD,
     {
-    host: process.env.DB_HOST,
-    dialect: 'mysql',
+    host: "localhost",
+    dialect: "mysql",
     logging: false
 });
 
@@ -19,5 +19,6 @@ let connectDB = async () => {
         console.error("Unable to connect to the database: ", error);
     }
 };
+
 
 module.exports = connectDB;

@@ -8,12 +8,9 @@ dotenv.config();
 let SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 let sequelize = new Sequelize(
-    // process.env.DB_DATABASE,
-    // process.env.DB_USERNAME,
-    // process.env.DB_PASSWORD,
-    'doctorcare',
-    'DevWeb',
-    'devweb123',
+    "doctorcare",
+    process.env.DB_USERNAME,
+    process.env.DB_PASSWORD,
     {
         host: process.env.DB_HOST,
         dialect: "mysql",

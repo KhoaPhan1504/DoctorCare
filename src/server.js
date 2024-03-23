@@ -8,7 +8,7 @@ const flash = require('connect-flash');
 const methodOverride = require('method-override');
 const passPort = require('passport');
 const session = require('./config/session');
-const connectDB = require('./config/connectDB');
+// const connectDB = require('./config/connectDB');
 
 
 const app = express();
@@ -28,7 +28,7 @@ app.use(passPort.session());
 
 initRoutes(app);
 
-connectDB();
+// connectDB();
 
 const PORT = process.env.PORT || 8080;
 
