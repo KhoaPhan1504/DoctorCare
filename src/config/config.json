@@ -2,9 +2,10 @@
     "development": {
         "username": "DevWeb",
         "password": "devweb123",
-        "database": "doctorcare",
+        "database": "DoctorCare",
         "host": "localhost",
         "dialect": "mysql",
+        "port": "3306",
         "logging": false,
         "query": {
             "raw": true
