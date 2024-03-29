@@ -8,8 +8,8 @@ const flash = require('connect-flash');
 const methodOverride = require('method-override');
 const passPort = require('passport');
 const session = require('./config/session');
-// const connectDB = require('./config/connectDB');
-
+const cors = require('cors');
+const helmet = require('helmet');
 
 const app = express();
 app.use(methodOverride('_method'));
@@ -26,11 +26,31 @@ configViewEngine(app);
 app.use(passPort.initialize());
 app.use(passPort.session());
 
+
+app.use(helmet({
+    referrerPolicy: { policy: 'strict-origin-when-cross-origin' }
+  }));
+  
+// app.use(function (req, res, next) {
+//     res.setHeader("Access-Control-Allow-Origin", "*");
+//     res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+//     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+//     next();
+// });
+
+const corsOptions = {
+    origin: "*",
+    methods: 'GET, PUT, POST, DELETE',
+    allowedHeaders: 'Content-Type, Authorization'
+};
+  
+
 initRoutes(app);
 
-// connectDB();
-
 const PORT = process.env.PORT || 8080;
+
+
+app.use(cors(corsOptions));
 
 app.listen(PORT, (req, res) => {
     console.log(`App listening on port http://localhost:${PORT}`);
