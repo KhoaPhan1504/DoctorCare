@@ -27,10 +27,22 @@ app.use(passPort.initialize());
 app.use(passPort.session());
 
 
-app.use(helmet({
-    referrerPolicy: { policy: 'strict-origin-when-cross-origin' }
-  }));
-  
+app.use(
+    helmet({
+        referrerPolicy: { 
+            policy: 'strict-origin-when-cross-origin' 
+        }
+    })
+);
+
+app.use(
+    helmet.contentSecurityPolicy({
+        directives: {
+            defaultSrc: ["self"],
+            scriptSrc: ["self", 'nonce-random-nonce-value', 'unsafe-inline']
+        },
+    })
+);
 // app.use(function (req, res, next) {
 //     res.setHeader("Access-Control-Allow-Origin", "*");
 //     res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
