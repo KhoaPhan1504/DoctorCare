@@ -1,7 +1,7 @@
 {
     "development": {
-        "username": "DevWeb",
-        "password": "devweb123",
+        "username": "root",
+        "password": "KhoaDev123",
         "database": "DoctorCare",
         "host": "localhost",
         "dialect": "mysql",

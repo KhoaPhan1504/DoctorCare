@@ -16,11 +16,11 @@
 // });
 
 
-// // DELETE /doctorcare_haryphamdev
+// // DELETE /doctorcare_khoadev
 // //
-// // DELETE /doctorcare_haryphamdev/posts/1
+// // DELETE /doctorcare_khoadev/posts/1
 // //
-// // PUT doctorcare_haryphamdev
+// // PUT doctorcare_khoadev
 // // {
 // //     "mappings": {
 // //     "type_name": {
@@ -44,7 +44,7 @@
 // // }
 // // }
 // //
-// // PUT /doctorcare_haryphamdev/post/2
+// // PUT /doctorcare_khoadev/post/2
 // // {
 // //     "postId": "3",
 // //     "writerId": "6",
@@ -54,7 +54,7 @@
 // // }
 // //
 // //
-// // GET /doctorcare_haryphamdev/posts/_search
+// // GET /doctorcare_khoadev/posts/_search
 // // {
 // //     "query": {
 // //     "multi_match": {
