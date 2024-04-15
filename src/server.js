@@ -37,7 +37,7 @@ app.use(
 
 app.use(function (req, res, next) {
     res.setHeader(
-        'Content-Security-Policy', "default-src 'self'; script-src 'self' 'nonce-NjJjN2E5YjA0ZDJhNDlhZjlhMDFmZjQzMjE4YzhmMTAzOWNjZjVjMGZjNDIxMWU5YWIyNGMwMTg4NTA3ZmY4OQ=='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; frame-src 'self' http://player.vimeo.com; report-uri https://csper.io/; connect-src 'self' https://vimeo.com; media-src 'self' http://player.vimeo.com "
+        'Content-Security-Policy', "default-src 'self'; script-src 'self' https://apis.google.com; style-src 'self'  'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; frame-src 'self' http://player.vimeo.com; report-uri https://csper.io/; connect-src 'self' https://vimeo.com; media-src 'self' http://player.vimeo.com "
     );
     
     next();
