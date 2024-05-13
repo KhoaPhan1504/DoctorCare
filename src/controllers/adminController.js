@@ -4,7 +4,7 @@ import clinicService from "./../services/clinicService";
 import specializationService from "./../services/specializationService";
 import supporterService from "./../services/supporterService";
 import doctorService from "./../services/doctorService";
-import chatFBServie from "./../services/chatFBService";
+import chatFBService from "./../services/chatFBService";
 import multer from "multer";
 
 let getManageDoctor = async (req, res) => {
@@ -310,8 +310,8 @@ let deleteSpecializationById = async (req, res) => {
 let getManageBotPage = async (req, res) => {
     try {
         return res.send("Hello word. You'll need a witAI account. More info: please comment on my youtube channel.")
-        // let entities = await chatFBServie.getWitEntitiesWithExpression();
-        // let entityName = await chatFBServie.getWitEntities();
+        // let entities = await chatFBService.getWitEntitiesWithExpression();
+        // let entityName = await chatFBService.getWitEntities();
         // return res.render('main/users/admins/manageBot.ejs', {
         //     user: req.user,
         //     entities: entities,

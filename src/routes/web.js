@@ -141,6 +141,7 @@ let initRoutes = (app) => {
     router.post('/supporter/change-status-patient', auth.checkLoggedIn, supporter.postChangeStatusPatient);
     router.post('/supporter/get-logs-patient', auth.checkLoggedIn, supporter.getLogsPatient);
     router.post('/supporter/done-comment', auth.checkLoggedIn, supporter.postDoneComment);
+    
 
     router.post('/api/get-info-doctor-by-id', doctor.getInfoDoctorById);
     router.post('/api/get-info-clinic-by-id', clinic.getInfoClinicById);
